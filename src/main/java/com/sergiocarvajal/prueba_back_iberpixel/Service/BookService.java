@@ -43,14 +43,14 @@ public class BookService {
 
     public Book createBook(Book book){
         if(book.getId() == null){ //id is not on the body from the client
-            if(book.getAuthor() == null && book.getTitle() == null){
+            if(book.getAuthor() == null || book.getTitle() == null){
                 return null;
             }
-            if(book.getCreatedAt() == null){
+            if(book.getCreatedAt() == null || book.getCreatedAt().isAfter(LocalDate.now())){ //date is not specified or is after today. Sets creation date as today
                 book.setCreatedAt(LocalDate.now());
             }
-            if(book.getCreatedAt() == null){
-                book.setCreatedAt(LocalDate.now());
+            if(book.getIsRead() == null){
+                book.setIsRead(false);
             }
             return bookRepository.save(book);
         }

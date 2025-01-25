@@ -101,7 +101,11 @@ src/main/java/com/sergiocarvajal/prueba_back_iberpixel
 │
 ├── Controller
 │   └── BookController.java       # REST Controller
-├── Model
+├── Docs
+│   └── SwaggerConfig.java        # Swagger configuration
+│── ExceptionsHandler
+│   └── GlobalExceptionHandler.java   # Handler for global exceptions (specially used in invalidFormatException)
+├── Model 
 │   └── Book.java                 # JPA Entity
 ├── Repository
 │   └── BookRepository.java       # JPA Repository
@@ -110,5 +114,11 @@ src/main/java/com/sergiocarvajal/prueba_back_iberpixel
 └── PruebaBackIberPixelApplication.java    # Main Class
 ```
 
+## ❗️ Caution!
+Currently, GlobalExceptionHandler has @RestControllerAdvice annotation commented so it wont catch any exception.
+Its like this because there is a incompatibility with Swagger where it wont load the API doc.
+
+While the code of the class itself works as expected. I decided to keep it there safe until i find a solution for this problem. 
+
 ## 📙✏️ What's next?
-Next updates will have custom exceptions to handle errors more efficiently and test with Mockito.
+Next updates will have custom exceptions to handle errors more efficiently and tests with Mockito.

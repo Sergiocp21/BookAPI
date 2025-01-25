@@ -30,7 +30,7 @@ public class BookController {
 
 
     /**
-     *
+     * GET {id}
      * @param id received from client's url
      * @return ResponseEntity with: Book if the request is successful (status 200), otherwise, {message: error description} (status 404)
      */
@@ -95,9 +95,9 @@ public class BookController {
 
 
     /**
-     *
+     * POST
      * @param bookDetails received from client's JSON
-     * @return ResponseEntity with: Book object if the request is successful (status 201), otherwise, {message: error description} (status 409)
+     * @return ResponseEntity with: Book object if the request is successful (status 201), otherwise, {message: error description} (status 400)
      */
     @Operation(summary = "Creates a book")
     @Parameters({
@@ -117,14 +117,14 @@ public class BookController {
         }
         else{
             Map<String, String> error = new HashMap<>();
-            error.put("message", "Asegurate que estan todos los campos menos el id: title, author, isRead, (createdAt)");
-            return ResponseEntity.status(409).body(error);
+            error.put("message", "Asegurate que estan todos los campos menos el id: title, author, (isRead), (createdAt)");
+            return ResponseEntity.status(400).body(error);
         }
     }
 
 
     /**
-     *
+     * PUT
      * @param book received from client's json
      * @return ResponseEntity with: Book object if the request is successful (status 200), otherwise, {message: error description} (status 404)
      */
@@ -156,7 +156,7 @@ public class BookController {
 
 
     /**
-     *
+     * PATCH {id}
      * @param id of the book to update
      * @return Book object if the request is successful (status 200) with isRead field as !isRead, otherwise, {message: error description} (status 404)
      */
@@ -182,7 +182,7 @@ public class BookController {
 
 
     /**
-     *
+     * DELETE {id}
      * @param id id of the book to delete
      * @return ResponseEntity with: Map &lt;String String&gt;&gt; with the following structure: {message: description}
      */
