@@ -2,13 +2,12 @@
 
 ## 🗃 Table of Contents
 
-- [Description](#description)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
+- [Description](#🖍-Description)
+- [Features](#✨-Features)
+- [Technologies Used](#🛠️-Technologies-Used)
+- [Installation](#🚀-Installation)
 - [Usage](#📚-Usage)
 - [Project Structure](#📁-Project-Structure)
-- [Endpoints](#endpoints)
 
 ---
 
