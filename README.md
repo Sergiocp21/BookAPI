@@ -1,19 +1,10 @@
 # Book API REST
 
-## 🗃 Table of Contents
-
-- [Description](#🖍-Description)
-- [Features](#✨-Features)
-- [Technologies Used](#🛠️-Technologies-Used)
-- [Installation](#🚀-Installation)
-- [Usage](#📚-Usage)
-- [Project Structure](#📁-Project-Structure)
-
 ---
 
 ## 🖍 Description
 
-Book API Rest is a simple API for the unique Entity "Books" **Spring Boot**.
+Book API Rest is a simple API for the unique Entity "Books" created with **Spring Boot**.
 
 ## ✨ Features
 
@@ -119,3 +110,5 @@ src/main/java/com/sergiocarvajal/prueba_back_iberpixel
 └── PruebaBackIberPixelApplication.java    # Main Class
 ```
 
+## 📙✏️ What's next?
+Next updates will have custom exceptions to handle errors more efficiently and test with Mockito.
